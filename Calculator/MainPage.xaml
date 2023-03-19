@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage"
+             xmlns:fontAwesome="clr-namespace:FontAwesome"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <FontImageSource x:Key="FontImageSourcePlusGlyph"
+                         Glyph="{x:Static fontAwesome:FontAwesomeIcons.DeleteLeft}"
+                         Color="Black"
+                         Size="20"
+                         FontFamily="FontAwesome"/>
+
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="0.25*,0.75*">
+        <Grid Grid.Row="0" BackgroundColor="White" RowDefinitions=".5*, .5*">
+            <Label x:Name="answerBox" BackgroundColor="Transparent" Grid.Row="1" 
+                   HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End"
+                   VerticalOptions="Fill" FontSize="45"/>
+        </Grid>
+        <Grid Grid.Row="1" RowDefinitions="*,*,*,*,*" ColumnDefinitions="*,*,*,*" BackgroundColor="Teal">
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Frame CornerRadius="15" Margin="10" BackgroundColor="Orange">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="AC" HorizontalOptions="Center" VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Button CornerRadius="15" Margin="10" BackgroundColor="Orange" ImageSource="{StaticResource FontImageSourcePlusGlyph}" Clicked="Button_Clicked">
+                    
+                    
+                </Button>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="2">
+                <Frame CornerRadius="15" Margin="10" BackgroundColor="Orange">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="%" HorizontalOptions="Center" VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Frame CornerRadius="15" Margin="10" BackgroundColor="Orange">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="/" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Frame CornerRadius="15" Margin="10" >
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="7" HorizontalOptions="Center" VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+ 
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Frame CornerRadius="15" Margin="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="8" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="2">
+                <Frame CornerRadius="15" Margin="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="9" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="3">
+                <Frame CornerRadius="15" Margin="10" BackgroundColor="Orange">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="*" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="0">
+                <Frame CornerRadius="15" Margin="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="4" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="1">
+                <Frame CornerRadius="15" Margin="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="5" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="2">
+                <Frame CornerRadius="15" Margin="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="6" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="3">
+                <Frame CornerRadius="15" Margin="10" BackgroundColor="Orange">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="-" HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="0">
+                <Frame CornerRadius="15" Margin="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="1" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="1">
+                <Frame CornerRadius="15" Margin="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="2" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="2">
+                <Frame CornerRadius="15" Margin="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="3" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="3">
+                <Frame CornerRadius="15" Margin="10" BackgroundColor="Orange">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="+" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="4" Grid.ColumnSpan="2">
+                <Frame CornerRadius="15" Margin="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="0" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="4" Grid.Column="2">
+                <Frame CornerRadius="15" Margin="10" BackgroundColor="White">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="." HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="4" Grid.Column="3">
+                <Frame CornerRadius="15" Margin="10" BackgroundColor="Gray">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="=" HorizontalOptions="Center"  VerticalOptions="Center" FontSize="23" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+
+       
+            
+        </Grid>
+
+
+    </Grid>
+
+</ContentPage>
